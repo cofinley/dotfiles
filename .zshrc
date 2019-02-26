@@ -115,7 +115,7 @@ stty stop undef
 # Docker
 
 function docker_latest () {
-	docker ps -l -q
+    docker ps -l -q
 }
 
 function docker_latest_image () {
@@ -123,11 +123,11 @@ function docker_latest_image () {
 }
 
 function dkl () {
-	docker kill "$(docker_latest)"
+    docker kill "$(docker_latest)"
 }
 
 function deb () {
-	docker exec -it "$(docker_latest)" bash
+    docker exec -it "$(docker_latest)" bash
 }
 
 alias dps="docker ps"
@@ -135,17 +135,17 @@ alias db="docker build -t mybuild ."
 alias rdl="node /workspace/src/yc/jinja-renderer-service/scripts/run-docker-locally.js mybuild:latest"
 
 function dr () {
-	dkl ; db ; rdl
+    dkl ; db ; rdl
 }
 
 # Custom Bash
 
 function find_big_files() {
-	find . -size +$1 -exec ls -lh {} \; 2> /dev/null | awk '{ print $5 ": " $NF }' | sort -nrk 1,1
+    find . -size +$1 -exec ls -lh {} \; 2> /dev/null | awk '{ print $5 ": " $NF }' | sort -nrk 1,1
 }
 
 function find_big_dirs() {
-	du -h -d 1 | sort -h
+    du -h -d 1 | sort -h
 }
 
 function cheat() {
