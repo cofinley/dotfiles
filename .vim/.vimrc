@@ -22,7 +22,7 @@ endif
 " Colors
 set t_Co=256
 syntax enable
-" set background=dark
+set background=dark
 colo solarized
 set colorcolumn=80
 

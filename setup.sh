@@ -1,21 +1,13 @@
-# Zsh
-
-ln -s ./.zshrc ~/.zshrc
-source ~/.zshrc
-
-# Powerlevel Theme Override (for time prompt)
-
-cp ./overrides/powerlevel9k.zsh-theme ~/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme
-
 # Vim
 
-ln -s ./.vim/.vimrc ~/.vimrc
-ln -s ./.vim/.ideavimrc ~/.ideavimrc
-cd ./.vim
+ln -s $(pwd)/.vim/.vimrc ~/.vimrc
+ln -s $(pwd)/.vim/.ideavimrc ~/.ideavimrc
+cd $(pwd)/.vim
 git submodule init
 git submodule update
+cd ..
 
 # Tmux
 
-ln -s ./.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 tmux source-file ~/.tmux.conf
