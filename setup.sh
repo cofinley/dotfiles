@@ -1,5 +1,6 @@
 # Vim
 
+ln -s $(pwd)/.vim/ ~/.vim
 ln -s $(pwd)/.vim/.vimrc ~/.vimrc
 ln -s $(pwd)/.vim/.ideavimrc ~/.ideavimrc
 cd $(pwd)/.vim
